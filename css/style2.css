@@ -2,13 +2,13 @@
     display: flex;
 }
 
-#sidebar {
+#sidebar { /* side bar da esquerda*/
     width: 200px;
     height: 650px; /* Altura total somando header + content + footer */
     background-color: #39bd56;
 }
 
-#right-container {
+#right-container { /* conteiner da direita*/
     width: calc(100% - 300px);
 }
 

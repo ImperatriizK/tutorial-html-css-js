@@ -8,7 +8,7 @@
     display: flex;
 }
 
-#sidebar-left {
+#sidebar-left { /* side bar da esquerda*/
     width: 200px;
     height: 400px;
     background-color: #39bd56;
@@ -20,7 +20,7 @@
     background-color: #df971b;
 }
 
-#sidebar-right {
+#sidebar-right { /* side bar da direita*/
     width: 200px;
     height: 400px;
     background-color: #39bd56;
