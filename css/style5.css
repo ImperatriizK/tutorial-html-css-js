@@ -11,7 +11,9 @@ body {
     background-color: #d1d14d;
     display: flex;
     justify-content: space-between; /* Empurra as caixas para os extremos */
-    padding: 10px;
+    /* outra opção para o space-between é usar margin no elemento 
+    para declarar é-> margin:auto - O que faz ele se ajustar automaticamente no espaço disponivel. Se for necessario centralizar dá marign auto nas duas laterais da div margin: auto 0 0 auto */
+    padding: 30px;
     box-sizing: border-box;
 }
 
