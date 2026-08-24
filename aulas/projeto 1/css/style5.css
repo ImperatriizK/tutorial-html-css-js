@@ -1,0 +1,174 @@
+/* Configurações de margem e espaçamento das seções */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+#section-1 {
+    width: 100%;
+    height: 120px;
+    background-color: #d1d14d;
+    display: flex;
+    justify-content: space-between; /* Empurra as caixas para os extremos */
+    /* outra opção para o space-between é usar margin no elemento 
+    para declarar é-> margin:auto - O que faz ele se ajustar automaticamente no espaço disponivel. Se for necessario centralizar dá marign auto nas duas laterais da div margin: auto 0 0 auto */
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#s1-box-left, #s1-box-right {
+    width: 200px;
+    height: 30px;
+    background-color: #ffffff;
+    /* border: 2px solid #333; */
+}
+
+
+#section-2 {
+    width: 100%;
+    height: 250px;
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os blocos horizontalmente */
+    justify-content: center;
+    gap: 15px; /*é sempre um espaço que funciona como margin, mas só funciona com display flex , ele dá espaço automatico */
+}
+
+#s2-banner {
+    width: 50%;
+    height: 100px;
+    background-color: #ffffff;
+   /* border: 2px solid #333;*/  
+}
+
+#s2-subbanner {
+    width: 20%;
+    height: 30px;
+    background-color: #ffffff;
+    /*border: 2px solid #333;*/
+}
+
+
+#section-3 {
+    width: 100%;
+    height: 200px;
+    background-color: #39bd56;
+    display: flex;
+    justify-content: space-around; /* Distribui os 3 igualmente */
+    align-items: center;
+}
+
+#s3-card-1, #s3-card-2, #s3-card-3 {
+    width: 25%;
+    height: 140px;
+    background-color: #f8f7f7;
+    /*border: 2px solid #333;*/
+}
+
+
+#section-4 {
+    width: 100%;
+    height: 300px;
+    background-color: #df971b;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#s4-left {
+    width:43%;
+    height: 100%;
+    background-color: #ffffff;
+    /*margin: 0 0 0 70px;*/
+    /*border: 2px solid #333;*/
+}
+
+#s4-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#s4-right-top, #s4-right-bottom {
+    width: 60%;
+    height: 45%;
+    background-color: #ffffff;
+    
+    /*border: 2px solid #333;*/
+}
+
+
+#section-5 {
+    width: 100%;
+    height: 200px;
+    background-color: #549eed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#s5-panel-1, #s5-panel-2 {
+    width: 40%;
+    height: 140px;
+    background-color: #ffffff;
+    /*border: 2px solid #333;*/
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+#s5-inner-1, #s5-inner-2 {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    /*border: 2px solid #333;*/
+    border-radius: 50%; /* dá pra ter formato arredondado*/
+}
+
+
+#section-6 {
+    width: 100%;
+    height: 350px;
+    background-color: #c2c2c2;
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+#s6-col-1 {
+    width: 30%;
+    height: 100%;
+    background-color: #ffffff;
+    /*border: 2px solid #333;*/
+}
+
+#s6-col-2 {
+    width: 35%;
+    height: 100%;
+    background-color: #ffffff;
+    /*border: 2px solid #333;*/
+}
+
+#s6-col-3 {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#s6-box-top, #s6-box-bottom {
+    width: 100%;
+    height: 45%;
+    background-color: #ffffff;
+    /*border: 2px solid #333;*/
+}
