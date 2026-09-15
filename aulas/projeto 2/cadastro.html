@@ -33,7 +33,136 @@
         <main>
             <div class="wrapper">
                 <h2>Cadastre-se no If Investments:</h2>
-            </div>    
+                
+                <form>
+
+                    <fieldset>
+                         <legend>Dados de acesso</legend>
+                        <label for="email">E-mail:</label>
+                        <input type="text" name="email" placeholder="Escreva o E-mail">
+
+                        <label for="passwordUser">Senha:</label>
+                        <input type="password" name="passwordUser" placeholder="Digite a senha">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Informações Pessoais</legend>
+                        <label for="nameUser">Nome:</label>
+                        <input type="text" name="nameUser" placeholder="Escreva o nome">
+                        
+                        <label for="surName">Sobrenome:</label>
+                        <input type="text" name="surName" placeholder="Escreva o sobrenome">
+                        
+                        <label for="phone">Telefone:</label>
+                        <input type="tell" name="phone" placeholder="Escreva o seu Telefone">
+
+                        <label for="cpf">CPF:</label>
+                        <input type="text" name="cpf" placeholder="Escreva o seu CPF">
+                    
+
+                        <!-- <label for="passwordUser">Senha:</label>
+                        <input type="password" name="passwordUser" placeholder="Digite a senha"> -->
+                    </fieldset>
+
+                    <h3>
+                        Escolha seu gênero
+                    </h3>
+                    <div>
+                        <input type="radio" name="feminino" id="feminino" value="feminino">
+                        <label for="feminino"> Feminino</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="masculino" id="masculino" value="feminino">
+                        <label for="masculino"> Masculino</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="outro" id="outro" value="outro">
+                        <label for="outro"> Outro, qual:</label>
+                        <input type="text" name="outro2" placeholder="Digite seu gênero">
+                    </div>
+                    <div>
+                        <input type="radio" name="prefiroNao" id="prefiroNao" value="femiprefiroNao">
+                        <label for="prefiroNao"> Prefiro não dizer</label>
+                    </div>
+
+                    <h3>
+                        Qual o seu perfil de investidor
+                    </h3>
+                    <div>
+                        <input type="radio" name="perfilInvestidor" id="conservador" value="conservador">
+                        <label for="conservador"> Conservador</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="perfilInvestidor" id="moderado" value="moderado"> <label for="moderado"> Moderado</label>
+                    </div>
+
+                    <div>
+                    <input type="radio" name="perfilInvestidor" id="arrojado" value="arrojado"> <label for="arrojado"> Arrojado</label>
+
+                    </div>
+
+                    <h3>Quais tipos de investimento voce tem interesse?</h3>
+
+                    <div>
+                        <input type="checkbox" name="investimentos[]" id="rendaFixa" value="rF"> <label for="rendaFixa"> Renda Fixa</label>
+
+                    </div>
+                    <!-- [] -> significa array, armazeando tudo na mesma variavel, para enviar para o backend, e o backend vai receber como array -->
+                    <div>
+                        <input type="checkbox" name="investimentos[]" id="rendaVariavel" value="rV"> <label for="rendaVariavel"> Renda Variável</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="investimentos[]" id="fundoImobiliario" value="fIm"> <label for="fundoImobiliario"> Fundo Imobiliário</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="investimentos[]" id="Criptoativos" value="cr"> <label for="Criptoativos"> Criptoativos </label>
+                    </div>
+                    <fieldset>
+                        <legend>Endereço</legend>
+                        <label for="rua">Rua:</label>
+                        <input type="text" name="rua" placeholder="Rua">
+                        <label for="bairro">Bairro:</label>
+                        <input type="text" name="bairro" placeholder="Bairro">
+                        <label for="num">Número:</label>
+                        <input type="text" name="num" placeholder="Número da casa">
+
+                        <label for="estado">Estado:</label>
+                        <select name="estado" id="estado">
+                            <option value="SP">São Paulo</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                        </select>
+                        <!-- select -> cria uma lista suspensa, com opções de escolha -->
+                         <label for="cidade">Cidade:</label>
+                        <input type="text" name="cidade" placeholder="Cidade">
+                      </fieldset>
+                    <!-- fieldset-> cria uma caixa com uma legenda -->
+                      <label for="objetivoInvest">Objetivo de Invetimento:</label>
+                        <textarea name="objetivoInvest" id="objetivoInvest" placeholder="Escreva seu objetivo de investimento"></textarea>
+
+                        <!-- textarea -> cria uma caixa de texto maior, para escrever mais informações. row diz quantas linhas e col quanto de largura  -->
+
+                        <div>
+                            <input type="checkbox" name="aceitaT" id="aceitaT" value="Tu"> <label for="aceitaT"> Aceite os termos de uso</label>
+
+                        </div>
+                        <div>
+                            <input type="checkbox" name="aceitaP" id="aceitaP" value="Pr"> <label for="aceitaP"> Aceite receber promoções</label>
+                        </div>
+
+                        <input type="submit" value="Cadastrar">
+                </form>
+                
+            </div> 
+             
         </main>
         <footer>
             <div class="wrapper">

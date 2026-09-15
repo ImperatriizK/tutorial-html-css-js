@@ -71,13 +71,13 @@ nav ul li a.active{
 
 main{
     background-color: #9e9e9e;
-    min-height: 500px; /*altura minima para o main, caso o conteúdo seja menor que 500px, o main vai ter 500px de altura */
+    height: 500px;
     padding: 20px;
 }
 
 footer{
-    background-color: #333030;
-    height: 60px;
+    background-color: #000;
+    height: 100px;
 }
 
 tr, th, td{
@@ -107,36 +107,3 @@ a:visited{
     color: #7710a7;
     text-decoration: none;
 }
-
-form {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-form label {
-    font-weight: bold;
-    margin: 20px 0 3px 0;
-}
-
-form input, select, textarea {
-    padding: 5px 8px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-}
-fieldset {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border: 2px solid #ffffff;
-}
-
-input[type="submit"] {
-    background-color: #5a5a5b;
-    color: #ebd6d6;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-} 
-/* SELETOR-> o input sozinho vai pegar todos os inputs, mas se colocar o type="submit" ele vai pegar somente o input do tipo submit, que é o botão de enviar, se colocar somente type então le pegará todos os inputs types que existem  */
