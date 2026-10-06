@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula JavaScript</title>
+    <script> //pode ser colocado em qualquer lugar do código, mas é mais comum colocar no head
+        // alert("Olá mundo/Hello Word JS"); //função de alerta de mensagem em pop-up, vai ser exibida para o usuário
+
+    </script>
+</head>
+<body>
+    <h1>Olá mundo/Hello World JS</h1>
+    <script>
+        
+        console.log("Inspeção: Ola, seja bem vindE"); //objeto exibe mensagem pra ver erro e não mostrar ao usuário, vai ser exibida no console do navegador
+        console.warn("Inspeção: Não tem erro aqui-TESTOK"); //vai mostrar o erro em amarelo no console do navegador
+        console.error("Inspeção: Não tem erro aqui-TESTOK"); //vai mostrar o erro em vermelho no console do navegador
+
+        const nome = "Joãozinho"; //constante, cria uma variáveç que não pode ser alterada
+        const idade = 6; 
+        const idade2 = 25; //tipo numerico
+        const idade3 = "6"; //tipo string
+        
+        console.log(nome,idade); //exibir as variaveis no console
+
+        let menorDeIdade = true; //variável, cria uma variável que pode ser alterada
+
+        if (menorDeIdade) {
+            console.log("Menor de idade");
+        } else {
+            console.log("Maior de idade");
+        }
+
+        menorDeIdade = false; //alterando o valor da variável
+        if (menorDeIdade) {
+            console.log("Menor de idade");
+        } else {
+            console.log("Maior de idade");
+        }
+
+        if (idade < 18) {
+            console.log("Menor de idade SIM!");
+        } else {
+            console.log("Maior de idade SIM!");
+        }
+
+        if(idade == idade2) {
+            console.log("Idade é igual a idade2");
+        } else {
+            console.log("Idade é diferente de idade2");
+        }
+        if(idade == idade3) { //se comparar string com número, o JS vai converter a string para número e comparar
+            console.log("Idade é igual a string idade3");
+        } else {
+            console.log("Idade é diferente da string idade3");
+        }
+        if(idade === idade3) { //se compara com 3 iguais, o JS vai comparar o tipo de dado também, então vai dar diferente, pois idade é número e idade3 é string
+            console.log("Idade é igual a string idade3");
+        } else {
+            console.log("Idade é diferente da string idade3 SIM!");
+        }
+    </script>
+</body>
+</html>
