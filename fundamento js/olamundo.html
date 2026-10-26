@@ -13,20 +13,20 @@
     <h1>Olá mundo/Hello World JS</h1>
     <script>
         
-        console.log("Inspeção: Ola, seja bem vindE"); //objeto exibe mensagem pra ver erro e não mostrar ao usuário, vai ser exibida no console do navegador
+        /*console.log("Inspeção: Ola, seja bem vindE"); //objeto exibe mensagem pra ver erro e não mostrar ao usuário, vai ser exibida no console do navegador
         console.warn("Inspeção: Não tem erro aqui-TESTOK"); //vai mostrar o erro em amarelo no console do navegador
-        console.error("Inspeção: Não tem erro aqui-TESTOK"); //vai mostrar o erro em vermelho no console do navegador
+        console.error("Inspeção: Não tem erro aqui-TESTOK"); //vai mostrar o erro em vermelho no console do navegador*/
 
-        const nome = "Joãozinho"; //constante, cria uma variáveç que não pode ser alterada
-        const idade = 6; 
-        const idade2 = 25; //tipo numerico
-        const idade3 = "6"; //tipo string
+       // const nome = "Joãozinho"; //constante, cria uma variável que NÃO pode ser alterada
+       // const idade = 6; 
+        //const idade2 = 25; //tipo numerico
+       // const idade3 = "6"; //tipo string
         
-        console.log(nome,idade); //exibir as variaveis no console
+       // console.log(nome,idade); //exibir as variaveis no console
 
-        let menorDeIdade = true; //variável, cria uma variável que pode ser alterada
+       // let menorDeIdade = true; //variável, cria uma variável que PODE ser alterada
 
-        if (menorDeIdade) {
+       /* if (menorDeIdade) {
             console.log("Menor de idade");
         } else {
             console.log("Maior de idade");
@@ -59,7 +59,58 @@
             console.log("Idade é igual a string idade3");
         } else {
             console.log("Idade é diferente da string idade3 SIM!");
+        }*/
+
+
+
+        //AULA 26/10
+        /*uma string vazia é false, então se colocar uma string vazia no if, ele vai entrar no else -> if ("") 
+        -> zero é false, 1 é verdadeiro
+        -> null é false, pq é vazio.
+        -> variável não definida também é false (undefined): exemplo-- quando o valor tem um problema e a variável nao consegue receber o valor, então fica indefinido*/
+
+
+        //objetos
+
+        const user = {
+            nome: "Joãozinho", //sempre que for adicionar outra variável(propriedade quando se trata de objetos) dentro do objeto, colocar vírgula no final da linha
+            idade: 6,
+            altura: 1.20,
+            isAdmin: true, 
+            preferencias: ["Terror", "Aventura", "Comédia", 10, {titulo: "Suspense", codigo: 123}], //array, lista de preferências do usuário //objeto dentro do vetor(preferencias) 
+            endereco: { //Para um objeto dentro do objeto se usa 2 pontos pq é uma propriedade do tipo objeto
+                rua: "Rua A",
+                numero: 123,
+                cidade: "São Paulo",
+                estado: "SP",
+                local: ["brasil", "América do Sul", "Terra"] //array dentro do objeto
+            }
         }
+    
+        console.log(user.nome); //exibir o nome no objeto no console
+        console.log(user.idade); //exibir a idade no objeto no console
+
+        if (user.isAdmin) {
+            console.log("É administrador");
+        } else {
+            console.log("Não é administrador");
+        }
+
+        //const preferencias = ["Terror", "Aventura", "Comédia", 10]; //array, lista de preferências do usuário
+        //console.log(preferencias[0]); //exibir a primeira preferência no console - definido pela posição do array, que começa do 0 
+        
+        console.log(user.preferencias[1]); //exibir o segundo item do vetor preferência no console - definido pela posição do array, que começa do 0= AVENTURA
+
+        console.log(user.endereco.rua); //exibir a rua do endereço no console, coloca o nome do objeto, depois o nome da propriedade do objeto, depois o nome da propriedade do objeto dentro do objeto KKKKKKKKKKKKKKK
+
+        console.log(user.endereco.local[0]); //exibir o primeiro item do vetor local dentro do objeto endereço no console - definido pela posição do array, que começa do 0 = BRASIL
+
+        console.log(user.preferencias[4].titulo); //exibir o título do objeto dentro do vetor preferências no console - definido pela posição do array, que começa do 0 = SUSPENSE
+
+        //tudo que tiver dentro do objeto user são propriedades, o que tem dentro terão seus tipos de dados, que podem ser string, number, boolean, array ou objeto. E dentro do array pode ter qualquer tipo de dado, inclusive outro objeto. E dentro do objeto pode ter qualquer tipo de dado, inclusive outro objeto ou array(vetor).
+
+        console.log(user["nome"]); //também é possível acessar as propriedades do objeto usando colchetes, mas é mais comum usar o ponto. Exemplo: user["nome"] ou user["idade"].
+
     </script>
 </body>
 </html>
