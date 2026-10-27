@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atividade 1 - Objetos e Arrays</title>
+    </head>
+    <body>
+        <h1>Objetos e Arrays</h1>
+        <script>
+            const posts = [
+                {
+                    title: "Post 1",
+                    content: "Conteúdo do post 1",
+                    date: "2024-06-01",
+                    comments: [
+                        {user: "Lucas", comment: "Comentário 1"}, 
+                        {user: "Maria", comment: "Comentário 2"}
+                    ],
+                    "Is Published": true
+                }, 
+                {
+                    title: "Post 2",
+                    content: "Conteúdo do post 2",  
+                    date: "2024-06-02",
+                    comments: [
+                        {user: "João", comment: "Comentário 3"}, 
+                        {user: "Ana", comment: "Comentário 4"}
+                    ],
+                    "Is Published": false
+                },
+                {
+                    title: "Post 3",
+                    content: "Conteúdo do post 3",
+                    date: "2024-06-03",
+                    comments: [
+                        {user: "Pedro", comment: "Comentário 5"}, 
+                        {user: "Carla", comment: "Comentário 6"}
+                    ],
+                    "Is Published": true
+                },
+                {
+                    title: "Post 4",
+                    content: "Conteúdo do post 4",
+                    date: "2024-06-04",
+                    comments: [
+                        {user: "Lucas", comment: "Comentário 7"}, 
+                        {user: "Maria", comment: "Comentário 8"}
+                    ],
+                    "Is Published": true
+                },
+                {
+                    title: "Post 5",
+                    content: "Conteúdo do post 5",
+                    date: "2024-06-05",
+                    comments: [
+                        {user: "João", comment: "Comentário 9"}, 
+                        {user: "Ana", comment: "Comentário 10"}
+                    ],
+                    "Is Published": false
+                }
+            ]
+           
+            // Atividade de manipulação de arrays e objetos
+
+            // 1. Mostre no console o título do primeiro post.
+                console.log(posts[0].title);
+            // 2. Mostre no console o conteúdo do segundo post.
+                console.log(posts[1].title);
+            // 3. Mostre no console a data do terceiro post.
+                console.log(posts[2].title);
+            // 4. Mostre no console o comentário do primeiro usuário do quarto post.
+                console.log(posts[3].comments[0]);
+            // 5. Mostre no console o comentário do segundo usuário do quinto post.
+                console.log(posts[4].comments[1]);
+            // 6. Mostre no console se o quinto post está publicado ou não.
+                if(posts[4]["Is Published"] === true) { //console nao pode ir dentro da condição do IF
+                    console.log("5º está publicado");
+                } else {
+                    console.log("5º não está publicado");
+                }
+            // 7. Usando [] mostre no console o título do terceiro post.
+                console.log(posts[2]["title"]);
+            // 8. Usando [] mostre no console o conteúdo do quarto post.
+             console.log(posts[3]["content"]);
+
+        </script>
+    </body>
+</html>
