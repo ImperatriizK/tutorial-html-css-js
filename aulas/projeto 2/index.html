@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>If Investments</title>
         <link rel="stylesheet" href="css/style.css">
+        
     </head>
     <body>
         <header>
@@ -24,6 +25,9 @@
                         <li>
                             <a href="cadastro.html">Cadastro</a>
                         </li>
+                        <li>
+                            <button onclick="openModal('addStockModal')">+ ADD</button>
+                        </li>
                         <!-- li = lista ordenada -->
                     </ul> 
                     <!-- ul = lista não ordenada -->
@@ -32,12 +36,53 @@
         </header>
         <main>
             <div class="wrapper">
-                <h2>Bem vindo ao IF investiments</h2>
+                <h1>Bem vindo ao IF investiments</h1>
+                <div id="stockList">
+                    <div class="stockCard">
+                        <header>
+                           <div>
+                                <h2>APPL</h2>
+                                <span>Apple Inc.</span>
+                             </div> 
+                             <span class="stockValue up">S 100,00</span>
+                        </header>
+                        <footer class="stockPosition">
+                            <span><b>5</b> ações</span>
+                            <div>
+                                <span>Total</span>
+                                <span class="totalValue down">$500,00</span>
+                            </div>
+                        </footer>
+                    </div> 
+                </div>
             </div>    
         </main>
         <footer>
             <div class="wrapper">
             </div>
         </footer>
+        <div class="modal" id="addStockModal">
+            <main>
+                <h2>Adicionar Ação</h2>
+                <form id="addStockForm" onsubmit="addStock(event)"><!--pegar os dados e armazenar-->
+
+                    <label for="stockTicker">Simbolo:</label>
+                    <input type="text" id="stockTicker" name="stockTciker">
+
+                    <label for="stockName">Nome da Ação:</label>
+                    <input type="text" id="stockName" name="stockName" name="stockName">
+
+                    <label for="stockPrice">Preço da Ação:</label>
+                    <input type="number" id="stockPrice" name="stockPrice" required>
+
+                    <label for="stockQuantity">Quantidade:<label>
+                    <input type="number" id="stockQuantity" name="stockQuantity" name="stockQuantity">
+
+                    <input type="submit" value="Adicionar"> <!--aqui não é um botão pq ele não irá abrir algo e sim ENVIAR-->
+                     <button onclick="closeModal('addStockModal')">FECHAR</button>
+            </main>
+
+        </div>
     </body>
+    <script src="js/main.js"></script> <!--Para rodar o javascript depois de carregar a página-->
 </html>

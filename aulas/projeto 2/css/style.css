@@ -51,6 +51,8 @@ nav ul{
     padding: 0;
     margin: 0;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul li a{
@@ -140,3 +142,85 @@ input[type="submit"] {
     cursor: pointer;
 } 
 /* SELETOR-> o input sozinho vai pegar todos os inputs, mas se colocar o type="submit" ele vai pegar somente o input do tipo submit, que é o botão de enviar, se colocar somente type então le pegará todos os inputs types que existem  */
+
+button {
+    background-color: #5a5a5b;
+    color: #f1eded;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.387); /*Fundo escuro com opacidade, cada canal define a porcentagem de cor*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal > main {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 400px;
+    color:#000000
+}
+
+.modal main form input[type="text"], .modal main form input [type="number"] {
+    border: 1px solid #ccc;  
+}
+
+.modal main form input[type="submit"] {
+    background-color: #5a5a5b;
+    color: #f4f2f2;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 30px 0 0 0;
+    width: 400px;
+}
+
+.stockCard{
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 112px;
+    color: #aea2a2;
+    
+}
+
+.up{
+    color: #00ff00;
+}
+.down{
+    color: #ff0000;
+}
+
+.totalValue{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.stockCard header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.stockCard header{
+   margin: 0;
+}
+
+.stockCard footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
