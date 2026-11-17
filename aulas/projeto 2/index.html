@@ -26,7 +26,7 @@
                             <a href="cadastro.html">Cadastro</a>
                         </li>
                         <li>
-                            <button onclick="openModal('addStockModal')">+ ADD</button>
+                            <button onclick="openModal('addStockModal')">+ ADD</button> <!-- o botão dispara ao ser clicado -->
                         </li>
                         <!-- li = lista ordenada -->
                     </ul> 
@@ -50,9 +50,14 @@
                             <span><b>5</b> ações</span>
                             <div>
                                 <span>Total</span>
-                                <span class="totalValue down">$500,00</span>
+                                <span class="totalValue">$500,00</span>
                             </div>
                         </footer>
+                        <div class="stockActions">
+                            <button onclick="loadEditForm(this)" class="openModal">Editar</button>
+
+                            <button onclick="removeStock(this)" class="removeStock">Remover</button>
+                        </div>
                     </div> 
                 </div>
             </div>    
@@ -70,19 +75,44 @@
                     <input type="text" id="stockTicker" name="stockTciker">
 
                     <label for="stockName">Nome da Ação:</label>
-                    <input type="text" id="stockName" name="stockName" name="stockName">
+                    <input type="text" id="stockName" name="stockName">
 
                     <label for="stockPrice">Preço da Ação:</label>
                     <input type="number" id="stockPrice" name="stockPrice" required>
 
-                    <label for="stockQuantity">Quantidade:<label>
-                    <input type="number" id="stockQuantity" name="stockQuantity" name="stockQuantity">
+                    <label      for="stockQuantity">Quantidade:
+                    </label>
+                    <input type="number" id="stockQuantity" name="stockQuantity">
 
                     <input type="submit" value="Adicionar"> <!--aqui não é um botão pq ele não irá abrir algo e sim ENVIAR-->
-                     <button onclick="closeModal('addStockModal')">FECHAR</button>
+                     
+                </form>
+                <button onclick="closeModal('addStockModal')">FECHAR</button>
             </main>
 
         </div>
+
+        <div class="modal" id="editStockModal" style="display: none;">
+        <main>
+            <h2>Editar Ação</h2>
+            <form id="editStockForm" onsubmit="editStock(event)">
+                <label for="stockTicker">Simbolo:</label>
+                <input type="text" id="editStockTicker" name="stockTicker">
+
+                <label for="stockName">Nome da Ação:</label>
+                <input type="text" id="editStockName" name="stockName">
+
+                <label for="stockPrice">Preço da Ação:</label>
+                <input type="number" step="0.01" id="editStockPrice" name="stockPrice">
+
+                <label for="stockQuantity">Quantidade:</label>
+                <input type="number" id="editStockQuantity" name="stockQuantity">
+
+                <input type="submit" value="Salvar Alterações">
+            </form>
+            <button onclick="closeModal('editStockModal')">FECHAR</button>
+        </main>
+    </div>
     </body>
     <script src="js/main.js"></script> <!--Para rodar o javascript depois de carregar a página-->
 </html>

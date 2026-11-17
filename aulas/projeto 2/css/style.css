@@ -143,7 +143,16 @@ input[type="submit"] {
 } 
 /* SELETOR-> o input sozinho vai pegar todos os inputs, mas se colocar o type="submit" ele vai pegar somente o input do tipo submit, que é o botão de enviar, se colocar somente type então le pegará todos os inputs types que existem  */
 
-button {
+button, input[type="submit"] {
+    background-color: #5a5a5b;
+    color: #f1eded;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+button.main{
     background-color: #5a5a5b;
     color: #f1eded;
     border: none;
@@ -157,8 +166,9 @@ button {
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     background-color: rgba(0, 0, 0, 0.387); /*Fundo escuro com opacidade, cada canal define a porcentagem de cor*/
-    display: none;
+    display: none; /*começa escondido*/
     justify-content: center;
     align-items: center;
 }
@@ -171,18 +181,19 @@ button {
     color:#000000
 }
 
-.modal main form input[type="text"], .modal main form input [type="number"] {
+.modal main form input[type="text"], .modal main form input[type="number"] {
     border: 1px solid #ccc;  
 }
 
 .modal main form input[type="submit"] {
-    background-color: #5a5a5b;
+    /*background-color: #5a5a5b;
     color: #f4f2f2;
     border: none;
     padding: 10px 20px;
     border-radius: 10px;
     margin: 30px 0 0 0;
-    width: 400px;
+    width: 400px;*/
+    margin: 20px 0 0 0; 
 }
 
 .stockCard{
@@ -194,6 +205,7 @@ button {
     width: 200px;
     height: 112px;
     color: #aea2a2;
+    position: relative;
     
 }
 
@@ -204,8 +216,13 @@ button {
     color: #ff0000;
 }
 
+.stockValue{
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .totalValue{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -213,9 +230,11 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
 }
-.stockCard header{
-   margin: 0;
+
+.stockCard header h2{
+    margin: 0;
 }
 
 .stockCard footer{
@@ -224,3 +243,33 @@ button {
     align-items: center;
     height: 50px;
 }
+
+.stockCard footer div{
+    display: flex;
+    flex-direction: column;
+}
+
+#stockList{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stockActions{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #4f4a4aa9;
+    border-radius: 15px;
+}
+
+.stockCard:hover .stockActions{
+    display: flex;
+}
+    
