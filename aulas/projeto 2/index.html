@@ -53,11 +53,11 @@
                                 <span class="totalValue">$500,00</span>
                             </div>
                         </footer>
-                        <div class="stockActions">
+                        <!--<div class="stockActions">
                             <button onclick="loadEditForm(this)" class="openModal">Editar</button>
 
                             <button onclick="removeStock(this)" class="removeStock">Remover</button>
-                        </div>
+                        </div>-->
                     </div> 
                 </div>
             </div>    
@@ -93,26 +93,24 @@
         </div>
 
         <div class="modal" id="editStockModal" style="display: none;">
-        <main>
-            <h2>Editar Ação</h2>
-            <form id="editStockForm" onsubmit="editStock(event)">
-                <label for="stockTicker">Simbolo:</label>
-                <input type="text" id="editStockTicker" name="stockTicker">
+            <main>
+                <h2>Editar Ação</h2>
+                <form id="editStockForm" onsubmit="editStock(event)">
+                    <label for="stockTicker">Simbolo:</label>
+                    <input type="text" id="editStockTicker" name="stockTicker" disabled>
+                    <label for="stockName">Nome da Ação:</label>
+                    <input type="text" id="editStockName" name="stockName">
+                    <label for="stockPrice">Preço da Ação:</label>
+                    <input type="number" id="editStockPrice" name="stockPrice">
+                    <label for="stockQuantity">Quantidade:</label>
+                    <input type="number" id="editStockQuantity" name="stockQuantity">
 
-                <label for="stockName">Nome da Ação:</label>
-                <input type="text" id="editStockName" name="stockName">
+                    <input type="submit" value="Editar">
+                </form>
 
-                <label for="stockPrice">Preço da Ação:</label>
-                <input type="number" step="0.01" id="editStockPrice" name="stockPrice">
-
-                <label for="stockQuantity">Quantidade:</label>
-                <input type="number" id="editStockQuantity" name="stockQuantity">
-
-                <input type="submit" value="Salvar Alterações">
-            </form>
-            <button onclick="closeModal('editStockModal')">FECHAR</button>
-        </main>
-    </div>
+                <button onclick="closeModal('editStockModal')">FECHAR</button>
+            </main>
+        </div>
     </body>
     <script src="js/main.js"></script> <!--Para rodar o javascript depois de carregar a página-->
 </html>

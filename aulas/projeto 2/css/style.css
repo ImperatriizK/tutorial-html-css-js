@@ -181,6 +181,11 @@ button.main{
     color:#000000
 }
 
+.modal > main > button {
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+
 .modal main form input[type="text"], .modal main form input[type="number"] {
     border: 1px solid #ccc;  
 }
@@ -230,7 +235,7 @@ button.main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
+    /*margin: 0;*/
 }
 
 .stockCard header h2{
